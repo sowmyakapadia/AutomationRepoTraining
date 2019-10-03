@@ -4,7 +4,7 @@ public class TestPackage1 {
 
 	public static void main(String[] args)
 	{
-		System.err.println("Your Login ID is incorrect");
+		System.err.println("The details entered are incorrect");
 		// TODO Auto-generated method stub
 
 	}
