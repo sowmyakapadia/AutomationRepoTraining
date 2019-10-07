@@ -7,8 +7,6 @@ public class ConditionalStatement4 {
 		int a=105;
 		int b=200;
 		int c=100;
-
-
 				
 		//Nested If conditions
 		if(a>b)
