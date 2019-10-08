@@ -13,7 +13,7 @@ public static void main(String[] args) {
 	String name3="Mr C";
 	String name4="Mr D";
 	
-	if (sal1>sal3 && sal1>sal4) {System.out.println(name1+" has the highest salary");} 
+	if (sal1>sal3 && sal1> sal2 && sal1>sal4) {System.out.println(name1+" has the highest salary");} 
 	else {System.out.println(name1+" does not have the highest salary");}
 	
 	if (sal2>sal1 && sal2>sal3 && sal2>sal4) {System.out.println(name2+" has the highest salary");}
