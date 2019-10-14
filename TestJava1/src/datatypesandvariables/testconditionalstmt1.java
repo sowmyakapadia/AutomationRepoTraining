@@ -3,8 +3,8 @@ package datatypesandvariables;
 public class testconditionalstmt1 {
 public static void main(String[] args) {
 	
-	int sal1=5000;
-	int sal2=30000;
+	int sal1=15000;
+	int sal2=3000;
 	int sal3=8000;
 	int sal4=1000;
 	
