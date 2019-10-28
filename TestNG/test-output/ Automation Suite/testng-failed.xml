@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ Automation Suite]">
+  <test name=" Chat Test">
+    <classes>
+      <class name="BasicTestNGAnnotations.PersonalChat"/>
+      <class name="BasicTestNGAnnotations.GroupChat"/>
+    </classes>
+  </test> <!--  Chat Test -->
+  <test name=" Status Test">
+    <classes>
+      <class name="BasicTestNGAnnotations.VideoStatus"/>
+      <class name="BasicTestNGAnnotations.ImageStatus"/>
+    </classes>
+  </test> <!--  Status Test -->
+  <test name=" Pre Suite">
+    <classes>
+      <class name="BasicTestNGAnnotations.BaseClass"/>
+    </classes>
+  </test> <!--  Pre Suite -->
+  <test name=" Chat Test(failed)">
+    <classes>
+      <class name="BasicTestNGAnnotations.GroupChat">
+        <methods>
+          <include name="preConditionForTestcase"/>
+          <include name="test2"/>
+          <include name="postConditionForTestcase"/>
+          <include name="beforeClass"/>
+          <include name="afterChatModule"/>
+          <include name="test1"/>
+          <include name="beforeChatModule"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- BasicTestNGAnnotations.GroupChat -->
+      <class name="BasicTestNGAnnotations.ImageStatus">
+        <methods>
+          <include name="beforeStatustModule"/>
+          <include name="postConditionForTestcase"/>
+          <include name="preConditionForTestcase"/>
+          <include name="afterStatusModule"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- BasicTestNGAnnotations.ImageStatus -->
+      <class name="BasicTestNGAnnotations.BaseClass">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- BasicTestNGAnnotations.BaseClass -->
+      <class name="BasicTestNGAnnotations.PersonalChat">
+        <methods>
+          <include name="preConditionForTestcase"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="postConditionForTestcase"/>
+        </methods>
+      </class> <!-- BasicTestNGAnnotations.PersonalChat -->
+      <class name="BasicTestNGAnnotations.VideoStatus">
+        <methods>
+          <include name="afterClass"/>
+          <include name="preConditionForTestcase"/>
+          <include name="beforeClass"/>
+          <include name="postConditionForTestcase"/>
+        </methods>
+      </class> <!-- BasicTestNGAnnotations.VideoStatus -->
+    </classes>
+  </test> <!--  Chat Test(failed) -->
+</suite> <!-- Failed suite [ Automation Suite] -->
