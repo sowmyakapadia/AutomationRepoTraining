@@ -13,7 +13,8 @@ public class Question7 {
 		str[6]="Name7";
 		str[7]="Name8";
 		str[8]="Name9";		
-		
+//in the for loop i+=2 will print alternate names. 
+//i+=3 will print every third name; i+=4 every fourth and so on 
 for (int i = 0; i < str.length; i+=2) {
 	
 	System.out.println(str[i]);
