@@ -115,6 +115,16 @@ public class TC4_OTripTwoPass {
 		Select mpref=new Select(meal);
 		mpref.selectByVisibleText("Vegetarian");
 		
+		WebElement fname1=dr.findElement(By.xpath("//input[@name='passFirst1']"));
+		fname1.sendKeys("Ira");
+		
+		WebElement lname1=dr.findElement(By.xpath("//input[@name='passLast1']"));
+		lname1.sendKeys("Kapadia");
+		
+		WebElement mPref1=dr.findElement(By.xpath("//select[@name='pass.1.meal']"));
+		Select meal1=new Select(mPref1);
+		meal1.selectByVisibleText("Kosher");
+		
 		WebElement crcd=dr.findElement(By.xpath("//select[@name='creditCard']"));
 		Select cr=new Select(crcd);
 		cr.selectByVisibleText("Visa");
