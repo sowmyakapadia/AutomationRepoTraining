@@ -21,8 +21,8 @@ public class MouseHover {
 		dr=new ChromeDriver();
 		dr.manage().window().maximize();
 		
-//This is to manage exception "element not found" and waits to check for element in DOM. 
-//This happens when page is unavailable to perform the action.		
+//This is to manage exception "element not found" . the program waits to check for element in DOM. 
+//This exception occurs when page is unavailable to perform the action.		
 		dr.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		
 		dr.get("https://www.flipkart.com/");
@@ -44,7 +44,7 @@ public class MouseHover {
 		act.dragAndDropBy(dr.findElement(By.xpath("(//div[@class='_3aQU3C'])[1]")), 50, 0).build().perform();
 //		Thread.sleep(2000);
 //This is for right drag		
-//		act.dragAndDropBy(dr.findElement(By.xpath("(//div[@class='_3aQU3C'])[2]")), -50, 0).build().perform();
+		act.dragAndDropBy(dr.findElement(By.xpath("(//div[@class='_3aQU3C'])[2]")), -50, 0).build().perform();
 		
 //Explict wait given for a shirt selection on page
 //		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathExpression))).click();
