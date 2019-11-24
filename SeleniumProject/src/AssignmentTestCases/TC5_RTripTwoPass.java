@@ -7,11 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class TC5_RTripTwoPass {
 
 	WebDriver dr;
-	
+	@Test
 	public void launchWP()
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
@@ -20,7 +21,7 @@ public class TC5_RTripTwoPass {
 		dr.get("http://newtours.demoaut.com/");
 		
 	}
-	
+	@Test
 	public void login()
 	{
 		WebElement uname=dr.findElement(By.xpath("//input[@name='userName']"));
@@ -33,7 +34,7 @@ public class TC5_RTripTwoPass {
 		boolean res1=nxtpageverify(pg1);
 		Assert.assertEquals(true, res1);
 	}
-	
+	@Test
 	public void rwayopass() 
 	{
 		WebElement rway=dr.findElement(By.xpath("//input[@name='tripType']"));
@@ -142,9 +143,9 @@ public class TC5_RTripTwoPass {
 		WebElement cclname=dr.findElement(By.xpath("//input[@name='cc_last_name']"));
 		cclname.sendKeys("Kapadia");
 		
-		WebElement ticketless=dr.findElement(By.xpath("//input[@name='ticketLess']"));
-		System.out.println(ticketless.isSelected());
-		ticketless.click();
+		WebElement billadd=dr.findElement(By.xpath("(//input[@value='checkbox'])[1]"));
+		System.out.println(billadd.isSelected());
+		billadd.click();
 		
 		WebElement billAdd1=dr.findElement(By.xpath("//input[@name='billAddress1']"));
 		billAdd1.clear();
@@ -173,6 +174,11 @@ public class TC5_RTripTwoPass {
 //		Alert alert=dr.switchTo().alert();
 //		System.out.println(alert.getText());
 //		alert.accept();
+		
+		WebElement deladd=dr.findElement(By.xpath("(//input[@value='checkbox'])[2]"));
+		System.out.println(deladd.isSelected());
+		deladd.click();
+		System.out.println(deladd.isSelected());
 		
 		WebElement delAdd1=dr.findElement(By.xpath("//input[@name='delAddress1']"));
 		delAdd1.clear();
